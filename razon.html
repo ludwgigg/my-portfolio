@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #b9fbc0); /* Light cyan to pastel green gradient */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      margin-bottom: 20px;
+      background-color: #00796b; /* Darker teal */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffffff; /* White text for better contrast */
+    }
+    .container {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white background for better readability */
+      border-radius: 8px;
+    }
+    section {
+      padding: 60px 0;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    section h1 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      color: #004d40; /* Darker teal */
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      color: #555; /* Darker grey */
+    }
+    #home {
+      display: block;
+      text-align: center;
+      opacity: 1;
+    }
+    #home h1, #home p {
+      margin: 0;
+    }
+    #home img {
+      width: 150px; /* Adjust the size as needed */
+      height: 150px; /* Keep height same as width for a circular shape */
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+      border-radius: 50%; /* Circular shape */
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #home img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .btn-primary, .btn-secondary {
+      padding: 10px 20px;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary {
+      background-color: #b39ddb; /* Pastel purple */
+      border-color: #b39ddb;
+    }
+    .btn-primary:hover {
+      background-color: #8e24aa; /* Darker purple */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-secondary {
+      background-color: #f8bbd0; /* Pastel pink */
+      border-color: #f8bbd0;
+    }
+    .btn-secondary:hover {
+      background-color: #f48fb1; /* Darker pink */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    form .form-group label {
+      font-weight: bold;
+    }
+    form .form-control {
+      border-radius: 0;
+    }
+    form .btn-primary {
+      background-color: #b39ddb;
+      border-color: #b39ddb;
+    }
+    #about {
+      text-align: center;
+      display: block;
+    }
+    .about-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #e1bee7; /* Pastel purple border */
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .resume-section {
+      text-align: left;
+    }
+    .contact-icon {
+      display: inline-block;
+      margin: 0 15px;
+      transition: transform 0.3s ease;
+    }
+    .contact-icon img {
+      width: 40px; /* Adjust size as needed */
+      height: 40px; /* Ensure width and height are the same for a square shape */
+    }
+    .contact-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hello! I’m Ludwig A. Razon, a 22-year-old IT enthusiast and a proud BSIT student at NDKC. With a passion for basketball and biking, I enjoy staying active and embracing new challenges. I thrive on creative problem-solving and the opportunity to build meaningful relationships in both personal and professional settings. My journey in IT is driven by a desire to leverage technology to solve real-world problems and contribute to innovative projects.</p>
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocIz412NU65UyX8SorFNo-5qQHEf_tf8cn-AH3MG1rKszilNAP0F=s288-c-no" alt="My Photo" class="img-fluid">
+      <div class="btn-container">
+        <button class="btn btn-primary" onclick="showSection('about')">Next: About Me</button>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1>About Me</h1>
+      <img src="https://static.wixstatic.com/media/55a812_0fbc62df7c5b49eba7086dc4529539b1~mv2.jpg/v1/crop/x_0,y_614,w_1536,h_1434/fill/w_343,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/318741442_649232540275803_6498776626926997566_n.jpg" alt="About Me" class="about-image">
+      <div class="resume-section">
+        <h2>Ludwig Alvarez Razon</h2>
+        <p>To acquire valuable knowledge and skills to complement those that I have learned from school in an actual job environment. In return, I offer my service and determination to be an asset to your company throughout the duration of my training period.</p>
+        <h3>Education</h3>
+        <ul>
+          <li>Notre Dame of Kidapawan College - Bachelor of Science in Information Technology (BSIT) (2022-PRESENT)</li>
+          <li>President Roxas National High School - Technical Vocational-Livelihood Information and Communication Technology (ICT) (2019-2020)</li>
+        </ul>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Computer Systems Servicing (CSS) NCII</li>
+          <li>Innotechsphere 2023: PSITS Seminar and Workshop</li>
+          <li>Seminar - Building Serverless PWAs with Firebase</li>
+        </ul>
+        <h3>Skills</h3>
+        <ul>
+          <li>Web Development: HTML, CSS, JavaScript, VBA (Visual Basic for Application)</li>
+          <li>Programming Languages: Java, C++, C, PHP</li>
+          <li>Networking (Basic Skills)</li>
+          <li>Microsoft Office: Word, PowerPoint Presentation, Excel</li>
+          <li>Capable of editing pictures and files using Canva Pro</li>
+          <li>Publication Materials (Pub Mats) in any social media platforms</li>
+          <li>Adobe Lightroom</li>
+          <li>Photographer</li>
+        </ul>
+        <h3>Additional Training</h3>
+        <ul>
+          <li>Seminar - Workshop on Java-based Android Studio</li>
+          <li>Leadership Training</li>
+        </ul>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-secondary" onclick="showSection('home')">Back</button>
+        <button class="btn btn-primary" onclick="showSection('projects')">Next: Projects</button>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <a href="https://ludwigrazon39.wixsite.com/ludwigarazon" target="_blank">
+            <img src="https://manage.wix.com/site-thumbnail/f5abeba0-864d-4d17-ad6b-938eeca2a6ed?preset=site-list" alt="Project 1" class="img-fluid project-img">
+            <p>NDKC Web-page</p>
+          </a>
+        </div>
+        <div class="col-md-6 text-center">
+          <a href="https://ludwigrazon39.wixsite.com/wiggyboy" target="_blank">
+            <img src="https://manage.wix.com/site-thumbnail/15d120f4-5066-4050-a536-23169d62747f?preset=site-list" alt="Project 2" class="img-fluid project-img">
+            <p>Personal Web-page</p>
+          </a>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-secondary" onclick="showSection('about')">Back</button>
+        <button class="btn btn-primary" onclick="showSection('contact')">Next: Contact Me</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <div class="btn-container">
+        <a href="mailto:ludwigrazon39@gmail.com" class="contact-icon" title="Email">
+          <img src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="Email">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100005765568193" class="contact-icon" title="Facebook">
+          <img src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png" alt="Facebook">
+        </a>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-secondary" onclick="showSection('projects')">Back</button>
+        <button class="btn btn-primary" onclick="showSection('home')">Home</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+        section.style.opacity = '0';
+      });
+      const targetSection = document.getElementById(sectionId);
+      targetSection.style.display = 'block';
+      setTimeout(() => {
+        targetSection.style.opacity = '1';
+      }, 10); // Delay to ensure the display change takes effect
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
